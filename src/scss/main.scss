@@ -1,0 +1,126 @@
+@mixin first__letter {
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    .container{
+        max-width: 1440px;
+        margin: 0 auto;
+        margin-top: 96px;
+        display: flex;
+        justify-content: center;
+        
+
+        @media (max-width: 967px) {
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .coast__image{
+            max-width: 505px;
+            max-height: 330px;
+            margin-right: 5.9375em;
+            @media (max-width: 967px) {
+                margin-right: 0;
+            }
+        }
+        .content{
+            max-width: 380px;
+            max-height: 250px;
+            &__item{
+                margin-top: 40px;
+            }
+
+            &__header{
+                font-weight: 700;
+                font-size: 2.625em;
+                @include first__letter();
+            }
+
+            &__description{
+                font-weight: 300;
+                font-size: 1em;
+                @include first__letter();
+            }
+
+            &__button{
+
+                cursor: pointer;
+                padding: 16px 40px;
+                border: none;
+                background-color: #E4C1AE;
+                border-radius: 20px;
+                font-weight: 700;
+                color: white;
+                @include first__letter();
+            }
+        }
+    }
+
+    .modal__wrapper{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        overflow: hidden;
+        overflow-y: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+        background-color: rgba($color: black, $alpha: 0.5);
+        display: none;
+
+        .modal__window{
+            min-width: 920px;
+            min-height: 210px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            
+            @media (max-width: 967px){
+                min-width: 0;
+            }
+
+            .modal__close{
+                border: none;
+                background: none;
+                cursor: pointer;
+                max-width: 12px;
+                max-height: 12px;
+                margin-top: 5%;
+                margin-right: 5%;
+            }
+            .modal__content{
+                padding: 56px 95px;
+
+                .modal__header{
+                    font-weight: 700;
+                    font-size: 2.625em;
+                    @include first__letter();
+                }
+
+                .modal__description{
+                    margin-top: 5%;
+                    font-weight: 300;
+                    font-size: 1em;
+                    @include first__letter();
+                }
+
+                .modal__click, .modal__time{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
