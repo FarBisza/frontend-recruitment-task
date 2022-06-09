@@ -4,8 +4,38 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Name] [Surname] - Recruitment task</title>
+    <title>FARKHAD BISSALIYEV - Recruitment task</title>
+    <link rel="stylesheet" href="./src/scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <main class="main">
+        <section class="container">
+            <section class="image">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg">
+                    <img src="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg" class="coast__image" alt="sunset by the sea on the tropical island">
+                </picture>
+            </section>
+            <section class="content">
+                <h1 class="content__header content__item">lorem ipsum</h1>
+                <section class="content__description content__item">infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.</section>
+                <button class="content__button content__item">button</button>
+            </section>
+        </section>
+    </main>
 
+    <div class="modal__wrapper">
+        <div class="modal__window">
+            <button data-hystclose class="modal__close"><img src="./icons/close_icon/close_icon.png" alt="close button for popup"></button>  
+            <div class="modal__content">
+                <div class="modal__header">alert!</div>
+                <div class="modal__description">you have clicked <span class="modal__click"></span> <span class="modal__time">times</span> to related button.</div>
+            </div>
+        </div>
+    </div>
+    <script src="./src/js/main.js"></script>
 </body>
+</html>
